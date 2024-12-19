@@ -67,9 +67,9 @@ function renderProduct(product){
                     </div>
                 </div>
                 <div class="last">
-                    <h2>HOW TO COOK IT
+                    <h2>Product Description
                     </h2>
-                    <p>This recipe was carefully designed and tested by Real Simple. Please check out directions at their website.</p>
+                    <p>${product.productDetails}</p>
                     <button class="btn">DIRECTION <i class='bx bx-right-arrow-alt' ></i></button>
                 </div>`
 

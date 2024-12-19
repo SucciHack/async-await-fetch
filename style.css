@@ -203,11 +203,14 @@ main .productDetails .description .receipt .two p i {
   font-size: 1.5rem;
 }
 main .productDetails .last h2 {
+  margin-top: 1rem;
   text-align: center;
   color: red;
 }
 main .productDetails .last p {
   text-align: center;
+  width: 90%;
+  margin: 1rem auto;
 }
 main .productDetails .last button {
   display: flex;
