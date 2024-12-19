@@ -116,6 +116,12 @@ main .productsContainer .line-clamp {
 main .productDetails {
   width: 60%;
 }
+main .productDetails .comment {
+  font-size: 1.5rem;
+  text-align: center;
+  width: 70%;
+  margin: auto;
+}
 main .productDetails img {
   width: 100%;
   height: 400px;
