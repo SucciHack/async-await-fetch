@@ -1,25 +1,25 @@
 const API = "https://inventory-app-ten-gilt.vercel.app/api/v1/products"
 
+
+let result = []
 async function fetchProducts(){
     try {
         const res = await fetch(API)
-    const result= await res.json()
-    renderProducts(result.data)
-    renderProduct(result.data[0])
+        result= await res.json()
+        renderProducts(result.data)
+        renderProduct(result.data[0])
+        // renderProducts(result.data)
 
     const queryString = window.location.search
     const params = new URLSearchParams(queryString)
-    console.log(params)
 
     const slug = params.get("slug")
     const detailItem = result.data.find((item)=> item.slug === slug)
-    console.log(detailItem, slug)
     renderProduct(detailItem)
     } catch (error) {
-        console.log("error in fetch")
+        console.log("error in fetch", error)
     }
 }
-
 fetchProducts()
 
 
@@ -75,3 +75,14 @@ function renderProduct(product){
 
                 productDetails.insertAdjacentHTML("beforeend", details)
 }
+
+
+
+const inputBar = document.getElementById("input")
+inputBar.addEventListener("input", (event)=>{
+    event.preventDefault()
+    const searchQuery = event.target.value.toLowerCase()
+    const filteredProducts = result.data.filter((item)=> 
+    item.productDetails.toLowerCase().includes(searchQuery) || item.name.toLowerCase().includes(searchQuery)) || item.productPrice.toLowerCase.includes(searchQuery);
+    renderProducts(filteredProducts)
+})

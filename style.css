@@ -53,7 +53,8 @@ nav .middle .search ::placeholder, nav .middle .search :focus {
   font-size: 15px;
   outline: none;
 }
-nav .middle .search i {
+nav .middle .search button {
+  border: none;
   font-size: 1.5rem;
   background: linear-gradient(to right, #F4C987, #EE9B84);
   padding: 1rem 3rem;
@@ -62,7 +63,7 @@ nav .middle .search i {
   gap: 1rem;
   border-radius: 3rem;
 }
-nav .middle .search i span {
+nav .middle .search button span {
   font-size: 15px;
 }
 nav .last {
