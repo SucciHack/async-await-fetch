@@ -58,6 +58,10 @@ main{
         width: 60%;
         overflow-y: auto;
         height: 80%;
+        @media (max-width: 900px) {
+            height: 90%;
+            padding-bottom: 1.5rem;
+        }
         .comment{
             font-size: 1.5rem;
             text-align: center;
