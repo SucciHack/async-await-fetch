@@ -9,14 +9,15 @@
 body {
   background: linear-gradient(to right, #F6D488, #F1B085);
   min-height: 100vh;
+  overflow-y: hidden;
 }
 
 .container {
   width: 80%;
   margin: auto;
+  margin-top: 2rem;
   background: #F9F5F3;
-  min-height: 300px;
-  margin-top: 4rem;
+  height: 90vh;
   border-radius: 10px;
   overflow: hidden;
 }
@@ -83,10 +84,11 @@ nav .last :nth-last-of-type(1) {
 main {
   width: 100%;
   display: flex;
+  height: 100%;
 }
 main .productsContainer {
   background: #FFFFFF;
-  min-height: 300px;
+  overflow-y: auto;
   width: 40%;
 }
 main .productsContainer a {
@@ -114,8 +116,26 @@ main .productsContainer .line-clamp {
   text-overflow: ellipsis; /* Adds the ellipsis */
   -webkit-line-clamp: 1; /* Specifies the number of lines to show */
 }
+main ::-webkit-scrollbar {
+  width: 12px; /* Set the width of the scrollbar */
+  height: 12px; /* Set the height for horizontal scrollbar */
+}
+main ::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background color of the track */
+  border-radius: 6px; /* Rounded corners for the track */
+}
+main ::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #F6D388, #F1B285); /* Color of the scrollbar thumb */
+  border-radius: 6px; /* Rounded corners for the thumb */
+  border: 2px solid #f1f1f1; /* Adds spacing around the thumb */
+}
+main ::-webkit-scrollbar-thumb:hover {
+  background: #555; /* Change thumb color when hovered */
+}
 main .productDetails {
   width: 60%;
+  overflow-y: auto;
+  height: 80%;
 }
 main .productDetails .comment {
   font-size: 1.5rem;

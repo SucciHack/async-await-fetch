@@ -8,13 +8,14 @@
 body{
     background: linear-gradient(to right, #F6D488, #F1B085);
     min-height: 100vh;
+    overflow-y: hidden;
 }
 .container{
     width: 80%;
-    margin: auto;
+    margin:auto;
+    margin-top: 2rem;
     background: #F9F5F3;
-    min-height: 300px;
-    margin-top: 4rem;
+    height: 90vh;
     border-radius: 10px;
     overflow: hidden;
 }
