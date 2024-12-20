@@ -29,7 +29,7 @@ function renderProducts(items){
     items.forEach((item)=>{
         const productHtml=`
                 <a href="index.html?slug=${item.slug}" class="product">
-                    <img src="${item.productThumbnail || "./images/imgPlaceholder.jpg"}" alt="" width="80px" height="80px">
+                    <img src="${item.productThumbnail}" alt="" width="80px" height="80px">
                     <div class="content">
                         <p class="line-clamp">${item.name}</p>
                         <p class="line-clamp">${item.productDetails}</p>                   
@@ -60,9 +60,9 @@ function renderProduct(product){
 
                     <div class="receipt">
                         <div class="one">
-                            <img src="${product.productImages[0]}" alt="image">
-                            <img src="${product.productImages[1]}" alt="image">
-                            <img src="${product.productImages[2]}" alt="image">
+                            <img src="${product.productImages[0] || "./images/imgPlaceholder.jpg"}" alt="image">
+                            <img src="${product.productImages[1] || "./images/imgPlaceholder.jpg"}" alt="image">
+                            <img src="${product.productImages[2] || "./images/imgPlaceholder.jpg"}" alt="image">
                         </div>
                     </div>
                 </div>
